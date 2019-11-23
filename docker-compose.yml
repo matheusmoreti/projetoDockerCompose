@@ -2,7 +2,7 @@ version: '2'
 services:
 
   api:
-    build: api/.
+    image: matheusmoreti/compose_api
     ports:
       - "4000:5000"
     links:
@@ -11,7 +11,7 @@ services:
       - mysql
 
   mysql:
-    build: mysql/.
+    image: matheusmoreti/compose_mysql
     ports:
       - "3306:3306"
     volumes:
