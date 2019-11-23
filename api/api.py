@@ -39,6 +39,30 @@ def getBigData():
     except Exception as e:
         return 'Erro /getDados' + str(e) + traceback.format_exc()
 
+@app.route("/getMarketing")
+def getMarketing():
+    try:
+        cursor = mysql.connect().cursor()
+        cursor.execute("SELECT * from Alunos where CURSO = 'Marketing'")
+        r = [dict((cursor.description[i][0], value)
+            for i, value in enumerate(row)) for row in cursor.fetchall()]
+        json_string = json.dumps(r, default=json_serial)
+        return json_string
+    except Exception as e:
+        return 'Erro /getDados' + str(e) + traceback.format_exc()    
+
+@app.route("/getArquitetura")
+def getArquitetura():
+    try:
+        cursor = mysql.connect().cursor()
+        cursor.execute("SELECT * from Alunos where CURSO = 'Arquitetura de Solucoes'")
+        r = [dict((cursor.description[i][0], value)
+            for i, value in enumerate(row)) for row in cursor.fetchall()]
+        json_string = json.dumps(r, default=json_serial)
+        return json_string
+    except Exception as e:
+        return 'Erro /getDados' + str(e) + traceback.format_exc()        
+    
 if __name__ == "__main__":
     #teste()
     app.run(host='0.0.0.0',debug=True)
