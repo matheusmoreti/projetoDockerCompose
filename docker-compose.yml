@@ -17,6 +17,7 @@ services:
       mode: replicated
       restart_policy:
         condition: on-failure
+        
   mysql:
     image: matheusmoreti/compose_mysql
     ports:
@@ -27,7 +28,7 @@ services:
        MYSQL_ROOT_PASSWORD: senhaFiap
        MYSQL_USER: root
        MYSQL_DATABASE: projetoDC
-      deploy:
+    deploy:
       replicas: 1
       # resources:
       #   limits:
