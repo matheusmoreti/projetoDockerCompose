@@ -19,4 +19,4 @@ services:
     environment:
        MYSQL_ROOT_PASSWORD: senhaFiap
        MYSQL_USER: root
-       MYSQL_DATABASE: fiapdb
+       MYSQL_DATABASE: projetoDC
