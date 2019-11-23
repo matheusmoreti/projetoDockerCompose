@@ -15,4 +15,4 @@ VALUES
 (333765, "Ligia Araujo Hinniger", 26, "Big Data", "41BDT"),
 (333927, "Rodrigo Rossi", 35, "Marketing", "70MKT"),
 (333856, "Lionel Messi", 32, "Marketing", "70MKT"),
-(333856, "Kim Kawasaki", 28, "Arquitetura de Solucoes", "37AQS");
+(333956, "Kim Kawasaki", 28, "Arquitetura de Solucoes", "37AQS");
