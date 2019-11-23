@@ -22,29 +22,16 @@ def json_serial(obj):
         return obj.isoformat()
     raise TypeError ("Type %s not serializable" % type(obj))
 
-def teste():
-    cursor = mysql.connect().cursor()
-    cursor.execute("SELECT * from Alunos")
-    print cursor, str(cursor)
-    r = [dict((cursor.description[i][0], value)
-              for i, value in enumerate(row)) for row in cursor.fetchall()]
-    json_string = json.dumps(r, default=json_serial)
-    print json_string
-    return "hola"
-
 @app.route("/")
 def hello():
     return "Bem vindo! Essa API retorna lista de alunos!\n"
 
-@app.route("/Teste")
-def Teste():
-    return "Teste!\n"
 
 @app.route("/getDados")
-def getDados():
+def getBigData():
     try:
         cursor = mysql.connect().cursor()
-        cursor.execute("SELECT * from Alunos")
+        cursor.execute("SELECT * from Alunos where CURSO = 'Big Data'")
         r = [dict((cursor.description[i][0], value)
             for i, value in enumerate(row)) for row in cursor.fetchall()]
         json_string = json.dumps(r, default=json_serial)
