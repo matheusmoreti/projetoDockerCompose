@@ -34,7 +34,7 @@ def teste():
 
 @app.route("/")
 def hello():
-    return "Welcome to the FIAP API!\n"
+    return "Bem vindo! Essa API retorna lista de alunos!\n"
 
 @app.route("/Teste")
 def Teste():
