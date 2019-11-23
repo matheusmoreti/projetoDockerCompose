@@ -24,7 +24,7 @@ def json_serial(obj):
 
 @app.route("/")
 def hello():
-    return "Bem vindo! Essa API retorna lista de alunos!\n"
+    return "Bem vindo! Essa API retorna lista de alunos. Para retornar a lista de alunos de Big Data, utilize getBigData; Para Marketing, getMarketing; Para Arquitetura de Solucoes, getArquitetura\n"
 
 
 @app.route("/getBigData")
