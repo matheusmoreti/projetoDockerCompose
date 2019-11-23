@@ -27,7 +27,7 @@ def hello():
     return "Bem vindo! Essa API retorna lista de alunos!\n"
 
 
-@app.route("/getDados")
+@app.route("/getBigData")
 def getBigData():
     try:
         cursor = mysql.connect().cursor()
