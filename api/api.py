@@ -12,7 +12,7 @@ mysql = MySQL()
 app = Flask(__name__)
 app.config['MYSQL_DATABASE_USER'] = 'root'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'senhaFiap'
-app.config['MYSQL_DATABASE_DB'] = 'fiapdb'
+app.config['MYSQL_DATABASE_DB'] = 'projetoDC'
 app.config['MYSQL_DATABASE_HOST'] = 'mysql'
 mysql.init_app(app)
 
